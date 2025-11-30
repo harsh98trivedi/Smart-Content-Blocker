@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Smart Content Blocker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        width: 400px;
+        min-height: 580px;
+        padding: 0;
+        margin: 0;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+        color: #ffffff;
+        overflow: hidden;
+        user-select: none;
+      }
+      .container {
+        padding: 24px;
+        position: relative;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 32px;
+        position: relative;
+      }
+      .header::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #fff, transparent);
+        opacity: 0.3;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+      }
+      .current-site {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 24px;
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+      }
+      .current-site::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+      }
+      .current-site .label {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 8px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .current-site .domain {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #ffffff;
+        word-break: break-all;
+        line-height: 1.3;
+      }
+      .button-group {
+        display: flex;
+        gap: 8px;
+      }
+      .section {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        backdrop-filter: blur(10px);
+        position: relative;
+      }
+      .section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+      }
+      .section-title {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 0 16px 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+      .add-domain {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      input[type="text"] {
+        flex: 1;
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+        font-family: inherit;
+        transition: all 0.3s ease;
+      }
+      input[type="text"]:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-1px);
+      }
+      input[type="text"]::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      button {
+        padding: 12px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: inherit;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+      button:hover::before {
+        left: 100%;
+      }
+      .btn-primary {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+        flex: 1;
+        font-weight: 600;
+      }
+      .btn-primary:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+      }
+      .btn-danger {
+        background: #dc3545;
+        color: #ffffff;
+        border-color: #dc3545;
+        flex: 1;
+        font-weight: 600;
+      }
+      .btn-danger:hover {
+        background: #c82333;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+      }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
+      }
+      .btn-remove {
+        background: #dc3545;
+        color: #ffffff;
+        border-color: #dc3545;
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+      .btn-remove:hover {
+        background: #c82333;
+        transform: translateY(-1px);
+      }
+      .btn-predefined {
+        background: #28a745;
+        color: #ffffff;
+        border-color: #28a745;
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+      .btn-predefined:hover {
+        background: #218838;
+        transform: translateY(-1px);
+      }
+      .btn-predefined:disabled {
+        background: #6c757d;
+        border-color: #6c757d;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 13px;
+        transition: all 0.3s ease;
+      }
+      .list-item:hover {
+        background: rgba(255, 255, 255, 0.02);
+        margin: 0 -20px;
+        padding: 12px 20px;
+        border-radius: 8px;
+      }
+      .list-item:last-child {
+        border-bottom: none;
+      }
+      .list-item .domain-name {
+        font-weight: 500;
+        flex: 1;
+        margin-right: 12px;
+        word-break: break-all;
+        color: #ffffff;
+      }
+      .empty-state {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        padding: 24px 0;
+        font-style: italic;
+      }
+      .status {
+        margin-top: 12px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 13px;
+        text-align: center;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+      }
+      .status.success {
+        background: rgba(40, 167, 69, 0.2);
+        border: 1px solid rgba(40, 167, 69, 0.3);
+        color: #28a745;
+      }
+      .status.error {
+        background: rgba(220, 53, 69, 0.2);
+        border: 1px solid rgba(220, 53, 69, 0.3);
+        color: #dc3545;
+      }
+      
+      /* Toggle Switch */
+      .toggle-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 22px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #28a745;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #28a745;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(18px);
+      }
+
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      #toggle-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Content Blocker</h1>
+        <div class="toggle-container">
+          <label class="switch">
+            <input type="checkbox" id="toggle-extension" checked />
+            <span class="slider round"></span>
+          </label>
+          <span id="toggle-label">Enabled</span>
+        </div>
+      </div>
+
+      <div class="current-site">
+        <div class="label">Current Site</div>
+        <div class="domain" id="current-domain">Loading...</div>
+        <div class="button-group">
+          <button id="whitelist-current" class="btn-primary">
+            Whitelist Site
+          </button>
+          <button id="block-current" class="btn-danger">Block Site</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Whitelisted Domains</h3>
+        <div class="add-domain">
+          <input
+            type="text"
+            id="domain-input"
+            placeholder="Enter custom domain"
+          />
+          <button id="add-domain" class="btn-secondary">Add</button>
+        </div>
+        <div id="whitelist-items"></div>
+        <div class="status" id="status" style="display: none"></div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Quick Add Social Media</h3>
+        <div id="predefined-items">
+          <div class="list-item">
+            <span class="domain-name">facebook.com</span>
+            <button class="btn-predefined" data-domain="facebook.com">
+              Add
+            </button>
+          </div>
+          <div class="list-item">
+            <span class="domain-name">instagram.com</span>
+            <button class="btn-predefined" data-domain="instagram.com">
+              Add
+            </button>
+          </div>
+          <div class="list-item">
+            <span class="domain-name">twitter.com</span>
+            <button class="btn-predefined" data-domain="twitter.com">
+              Add
+            </button>
+          </div>
+          <div class="list-item">
+            <span class="domain-name">x.com</span>
+            <button class="btn-predefined" data-domain="x.com">Add</button>
+          </div>
+          <div class="list-item">
+            <span class="domain-name">tiktok.com</span>
+            <button class="btn-predefined" data-domain="tiktok.com">Add</button>
+          </div>
+          <div class="list-item">
+            <span class="domain-name">reddit.com</span>
+            <button class="btn-predefined" data-domain="reddit.com">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        Made with ❤️ by <a href="https://harsh98trivedi.github.io" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">Harsh Trivedi</a>
+      </div>
+    </div>
+    <script src="lib/gsap.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

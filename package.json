@@ -1,0 +1,21 @@
+{
+  "name": "smart-content-blocker",
+  "version": "1.0.0",
+  "description": "A powerful Chrome extension that intelligently blocks inappropriate content and social media distractions using smart heuristic analysis.",
+  "scripts": {
+    "config": "node generate-config.js",
+    "build": "npm run config && node build.js",
+    "dev": "npm run config && node build.js --dev",
+    "watch": "nodemon -e js,html,css,json --ignore config.js --exec \"npm run build\"",
+    "clean": "rm -f config.js"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.0.0",
+    "@fontsource/space-grotesk": "^5.0.0",
+    "twemoji": "^14.0.2"
+  }
+}

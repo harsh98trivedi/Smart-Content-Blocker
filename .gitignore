@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Generated config file
+config.js
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db

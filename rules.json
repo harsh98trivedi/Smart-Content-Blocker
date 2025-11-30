@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "facebook.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.facebook.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "web.facebook.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "instagram.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.instagram.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "twitter.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.twitter.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "x.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.x.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "tiktok.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.tiktok.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "reddit.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.reddit.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "old.reddit.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 15,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "linkedin.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.linkedin.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "pinterest.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 18,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.pinterest.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 19,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "snapchat.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 20,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.snapchat.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 21,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "tumblr.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 22,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.tumblr.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 23,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "whatsapp.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 24,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "web.whatsapp.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 25,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "telegram.org", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 26,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "web.telegram.org", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 27,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "discord.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 28,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.discord.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 29,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "twitch.tv", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 30,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.twitch.tv", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 31,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "quora.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 32,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.quora.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 33,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "weibo.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 34,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "vk.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 35,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "ok.ru", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 36,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "flickr.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 37,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "meetup.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 38,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "nextdoor.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 39,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "threads.net", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 40,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "www.threads.net", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 41,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "9gag.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 42,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=social" } },
+    "condition": { "urlFilter": "imgur.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 50,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "pornhub.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 51,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.pornhub.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 52,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "xvideos.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 53,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.xvideos.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 54,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "xnxx.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 55,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.xnxx.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 56,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "xhamster.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 57,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.xhamster.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 58,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "youporn.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 59,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.youporn.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 60,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "redtube.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 61,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.redtube.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 62,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "porn.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 63,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.porn.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 64,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "brazzers.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 65,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.brazzers.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 66,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "chaturbate.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 67,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.chaturbate.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 68,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "livejasmin.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 69,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.livejasmin.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 70,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "bongacams.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 71,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.bongacams.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 72,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "cam4.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 73,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.cam4.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 74,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "stripchat.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 75,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.stripchat.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 76,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "adultfriendfinder.com", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 77,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/block.html?type=porn" } },
+    "condition": { "urlFilter": "www.adultfriendfinder.com", "resourceTypes": ["main_frame"] }
+  }
+]
